@@ -10,6 +10,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Clase que representa la estructura de respuesta para eventos en el sistema de compras.
+ * Esta clase se utiliza para encapsular la información de respuesta, incluyendo códigos de estado,
+ * mensajes y datos, así como posibles errores que puedan surgir durante el procesamiento.
+ *
+ * @param <T> El tipo de datos que se incluirán en la respuesta.
+ * @author grupo1
+ */
 @Getter
 @Setter
 @NoArgsConstructor

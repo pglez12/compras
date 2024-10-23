@@ -10,6 +10,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+/**
+ * Clase que representa la respuesta de un evento en el sistema de compras.
+ * Contiene información detallada sobre el evento, incluyendo su nombre,
+ * descripción, fechas y precios.
+ * @author grupo1
+ */
 @Getter
 @Setter
 @NoArgsConstructor
