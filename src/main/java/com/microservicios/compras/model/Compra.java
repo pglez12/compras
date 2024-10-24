@@ -9,13 +9,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.Future;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -52,8 +49,7 @@ public class Compra {
 	    
 	    @NotNull
 	    private String email;
-	    
-	    //@ManyToOne
-	    //@JoinColumn(name="idevento")
-	    private Long idevento;
+
+	    @NotNull
+	    private Long eventoid;
 }

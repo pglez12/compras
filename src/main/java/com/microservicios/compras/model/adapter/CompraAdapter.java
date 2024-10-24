@@ -23,7 +23,7 @@ public class CompraAdapter {
      */
 	public CompraDTOResponse adaptar(Compra compra) {
 		return new CompraDTOResponse(compra.getId(), compra.getPrecio(), compra.getFecha(), 
-				compra.getEmail(), compra.getIdevento());
+				compra.getEmail(), compra.getEventoid());
 	}
 	
 }
