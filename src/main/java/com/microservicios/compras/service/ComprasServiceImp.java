@@ -69,6 +69,7 @@ public class ComprasServiceImp implements ComprasService{
 
         return manejarRespuesta(response, precio, compraDTORequest);
     }
+    
 
     /**
      * Obtiene un evento por su ID.
@@ -95,7 +96,7 @@ public class ComprasServiceImp implements ComprasService{
      */
     public Double calcularPrecio(Long id) {
         EventoDTOResponse evento = eventoPorId(id);
-        
+       
         // Obtiene los precios mínimo y máximo del evento
         Double precioMin = evento.getPreciomin();
         Double precioMax = evento.getPreciomax();
