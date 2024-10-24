@@ -76,7 +76,7 @@ public class ComprasServiceImp implements ComprasService{
      *
      * @param id del evento que se desea obtener.
      * @return objeto EventoDTOResponse correspondiente al evento.
-     * @throws EventoNotFoundException si no se encuentra el evento con el ID proporcionado.
+     * @throws EventoNotFoundException si no se encuentra el evento o este esta desactivado
      */
     public EventoDTOResponse eventoPorId(Long id) {
         EventosResponse<EventoDTOResponse> response = comprasFeignClient.detalleEvento(id);
@@ -102,8 +102,7 @@ public class ComprasServiceImp implements ComprasService{
      */
     public Double calcularPrecio(Long id) {
         EventoDTOResponse evento = eventoPorId(id);
-       
-        // Obtiene los precios mínimo y máximo del evento
+
         Double precioMin = evento.getPreciomin();
         Double precioMax = evento.getPreciomax();
         
