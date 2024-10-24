@@ -81,9 +81,15 @@ public class ComprasServiceImp implements ComprasService{
     public EventoDTOResponse eventoPorId(Long id) {
         EventosResponse<EventoDTOResponse> response = comprasFeignClient.detalleEvento(id);
         
-        return Optional.ofNullable(response)
+        EventoDTOResponse evento = Optional.ofNullable(response)
                 .map(EventosResponse::getData)
                 .orElseThrow(() -> new EventoNotFoundException(id));
+        
+        if (!evento.getActivo()) {
+            throw new EventoNotFoundException(id);
+        }
+        
+        return evento;
     }
 
     /**
