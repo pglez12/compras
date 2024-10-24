@@ -30,6 +30,32 @@ public class ComprasServiceImp implements ComprasService{
     @Autowired
     private BancoFeignClient bancoFeignClient;
     
+  //------------------------------------------Paula-----------------------------------------------------//
+	
+	/*public Compra crearCompra(CompraDTOResponse compraDTOResponse) {
+		
+		EventoDTOResponse eventoDTOResponse = comprasFeignClient.getEventoById(compraDTOResponse.getIdEvento());
+		
+		if(eventoDTOResponse.getDisponible()) {
+			
+			Compra compra = new Compra();
+			
+			compra.setIdevento(compraDTOResponse.getIdevento());
+			compra.setEmail(compraDTOResponse.getEmail());
+			compra.setFecha(compraDTOResponse.getFecha());
+			compra.setPrecio(compraDTOResponse.getPrecio());
+			
+			return compraRepository.save(compra);
+			
+		}else {
+			throw new EventoNotFoundException(eventoDTOResponse.getMensaje());
+			
+		}
+		
+	}*/
+    
+ //------------------------------------------Paloma-----------------------------------------------------//
+    
     /**
      * Orquesta el proceso de compra.
      *
