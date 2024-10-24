@@ -30,8 +30,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Entity
-@Table(name = "compra")
+//@Entity
+//@Table(name = "compra")
 public class Compra {
 		
 		@Id

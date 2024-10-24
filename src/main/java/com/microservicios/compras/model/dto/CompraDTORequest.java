@@ -1,5 +1,6 @@
 package com.microservicios.compras.model.dto;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -24,6 +25,7 @@ import lombok.Setter;
 public class CompraDTORequest {
 
     @NotBlank(message = "Debe ingresar un id de evento válido")
+    @Min(0)
     private Long idevento;
 
     @NotBlank(message = "Debe ingresar un email")
